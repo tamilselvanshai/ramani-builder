@@ -19,11 +19,13 @@ export default function Projects() {
       className="bg-slate-900 text-white py-24 px-6"
     >
       <div className="max-w-7xl mx-auto">
+
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">
             Our <span className="text-yellow-400">Completed Projects</span>
           </h2>
+
           <p className="text-gray-300 mt-4 max-w-3xl mx-auto">
             Explore some of our completed residential and engineering projects
             across Salem. Every project reflects our commitment to quality,
@@ -32,7 +34,7 @@ export default function Projects() {
         </div>
 
         {/* Images */}
-        <h3 className="text-3xl font-bold text-yellow-400 mb-8 text-center">
+        <h3 className="text-3xl font-bold text-yellow-400 text-center mb-8">
           Project Gallery
         </h3>
 
@@ -49,10 +51,10 @@ export default function Projects() {
               <img
                 src={image}
                 alt={`Project ${index + 1}`}
-                className={`rounded-3xl shadow-2xl object-cover h-[350px] transition duration-500 hover:scale-105 ${
+                className={`rounded-3xl shadow-2xl bg-slate-800 w-full transition duration-500 hover:scale-105 ${
                   index === images.length - 1
-                    ? "w-full md:w-[48%]"
-                    : "w-full"
+                    ? "md:w-[48%]"
+                    : ""
                 }`}
               />
             </div>
@@ -60,7 +62,7 @@ export default function Projects() {
         </div>
 
         {/* Videos */}
-        <h3 className="text-3xl font-bold text-yellow-400 mb-8 text-center">
+        <h3 className="text-3xl font-bold text-yellow-400 text-center mb-8">
           Construction Videos
         </h3>
 
@@ -75,10 +77,10 @@ export default function Projects() {
               }
             >
               <video
-                className={`rounded-3xl shadow-2xl object-cover h-[350px] ${
+                className={`rounded-3xl shadow-2xl bg-slate-800 w-full ${
                   index === videos.length - 1
-                    ? "w-full md:w-[48%]"
-                    : "w-full"
+                    ? "md:w-[48%]"
+                    : ""
                 }`}
                 controls
                 muted
@@ -92,6 +94,7 @@ export default function Projects() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
