@@ -33,7 +33,7 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Images */}
+        {/* Project Gallery */}
         <h3 className="text-3xl font-bold text-yellow-400 text-center mb-8">
           Project Gallery
         </h3>
@@ -48,20 +48,24 @@ export default function Projects() {
                   : ""
               }
             >
-              <img
-                src={image}
-                alt={`Project ${index + 1}`}
-                className={`rounded-3xl shadow-2xl bg-slate-800 w-full transition duration-500 hover:scale-105 ${
+              <div
+                className={`bg-slate-800 rounded-3xl shadow-2xl p-4 flex items-center justify-center h-[350px] ${
                   index === images.length - 1
-                    ? "md:w-[48%]"
-                    : ""
+                    ? "w-full md:w-[48%]"
+                    : "w-full"
                 }`}
-              />
+              >
+                <img
+                  src={image}
+                  alt={`Project ${index + 1}`}
+                  className="max-w-full max-h-full object-contain transition duration-500 hover:scale-105"
+                />
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Videos */}
+        {/* Construction Videos */}
         <h3 className="text-3xl font-bold text-yellow-400 text-center mb-8">
           Construction Videos
         </h3>
@@ -76,21 +80,25 @@ export default function Projects() {
                   : ""
               }
             >
-              <video
-                className={`rounded-3xl shadow-2xl bg-slate-800 w-full ${
+              <div
+                className={`bg-slate-800 rounded-3xl shadow-2xl p-4 flex items-center justify-center h-[350px] ${
                   index === videos.length - 1
-                    ? "md:w-[48%]"
-                    : ""
+                    ? "w-full md:w-[48%]"
+                    : "w-full"
                 }`}
-                controls
-                muted
-                loop
-                playsInline
-                preload="metadata"
               >
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+                <video
+                  className="max-w-full max-h-full object-contain rounded-2xl"
+                  controls
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           ))}
         </div>
