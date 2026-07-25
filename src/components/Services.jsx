@@ -1,76 +1,96 @@
-function Services() {
-  const services = [
-    {
-      title: "Individual House Construction",
-      icon: "🏠",
-      description:
-        "Custom-designed homes built with premium materials and superior engineering.",
-    },
-    {
-      title: "Apartment Construction",
-      icon: "🏢",
-      description:
-        "Modern apartment projects with quality construction and timely delivery.",
-    },
-    {
-      title: "Booked House Construction",
-      icon: "🏘️",
-      description:
-        "Complete construction solutions across Salem according to customer requirements.",
-    },
-    {
-      title: "Engineering Services",
-      icon: "📐",
-      description:
-        "Planning, structural design, estimation, supervision, and consulting.",
-    },
-    {
-      title: "Real Estate",
-      icon: "🏡",
-      description:
-        "Trusted property buying, selling, and investment guidance.",
-    },
-    {
-      title: "Construction Loan Assistance",
-      icon: "💰",
-      description:
-        "Helping clients obtain home construction loans with ease.",
-    },
-  ];
+import {
+  FaHome,
+  FaBuilding,
+  FaDraftingCompass,
+  FaHardHat,
+  FaHandHoldingUsd,
+} from "react-icons/fa";
+import { MdRealEstateAgent } from "react-icons/md";
 
+const services = [
+  {
+    icon: <FaHome />,
+    title: "Individual House Construction",
+    desc: "Premium quality homes built with precision and durability.",
+  },
+  {
+    icon: <FaBuilding />,
+    title: "Apartment Construction",
+    desc: "Modern apartment projects with quality craftsmanship.",
+  },
+  {
+    icon: <FaHome />,
+    title: "Custom Home Construction",
+    desc: "Homes designed according to your lifestyle and needs.",
+  },
+  {
+    icon: <FaDraftingCompass />,
+    title: "Design & Build",
+    desc: "Planning, designing and construction under one roof.",
+  },
+  {
+    icon: <FaHardHat />,
+    title: "Engineering Services",
+    desc: "Professional engineering solutions with trusted quality.",
+  },
+  {
+    icon: <MdRealEstateAgent />,
+    title: "Real Estate",
+    desc: "Buying, selling and investment guidance.",
+  },
+  {
+    icon: <FaHandHoldingUsd />,
+    title: "Loan Assistance",
+    desc: "Helping you finance your dream construction.",
+  },
+];
+
+export default function Services() {
   return (
-    <section id="services" className="bg-slate-900 py-24">
+    <section
+      id="services"
+      className="bg-slate-950 text-white py-24"
+    >
       <div className="max-w-7xl mx-auto px-6">
 
-        <p className="text-yellow-400 uppercase tracking-[6px] text-center font-semibold">
-          WHAT WE OFFER
-        </p>
+        <div className="text-center mb-16">
 
-        <h2 className="text-5xl font-bold text-center text-white mt-4">
-          Our Services
-        </h2>
+          <p className="uppercase tracking-[5px] text-yellow-400 font-semibold">
+            OUR SERVICES
+          </p>
 
-        <p className="text-gray-300 text-center mt-6 max-w-3xl mx-auto">
-          We provide complete construction and engineering solutions with
-          unmatched quality, transparency, and customer satisfaction.
-        </p>
+          <h2 className="text-5xl font-bold mt-4">
+            Building
+            <span className="text-yellow-400"> Excellence</span>
+          </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          <p className="text-gray-400 mt-6 max-w-3xl mx-auto">
+            Complete construction, engineering and real estate
+            solutions with over 15 years of trusted experience.
+          </p>
+
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-slate-800 rounded-2xl p-8 hover:bg-yellow-400 hover:text-slate-900 transition duration-300 shadow-xl"
+              className="bg-slate-900 rounded-3xl p-8 border border-slate-800 hover:border-yellow-400 transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className="text-5xl">{service.icon}</div>
 
-              <h3 className="text-2xl font-bold mt-6">
+              <div className="w-16 h-16 rounded-full bg-yellow-400 text-slate-900 flex items-center justify-center text-3xl mb-6">
+                {service.icon}
+              </div>
+
+              <h3 className="text-2xl font-bold mb-3">
                 {service.title}
               </h3>
 
-              <p className="mt-4 leading-7">
-                {service.description}
+              <p className="text-gray-400 leading-7">
+                {service.desc}
               </p>
+
             </div>
           ))}
 
@@ -80,5 +100,3 @@ function Services() {
     </section>
   );
 }
-
-export default Services;
