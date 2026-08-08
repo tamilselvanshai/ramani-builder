@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
 
     <!-- RB Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/rb-favicon.svg" />
+    <link rel="icon" href="/rb-favicon.svg?v=2" />
+    <link rel="shortcut icon" href="/rb-favicon.svg?v=2" />
 
     <!-- Mobile / Browser -->
     <meta
@@ -20,13 +21,19 @@
     <!-- SEO Description -->
     <meta
       name="description"
-      content="RAMANI BUILDER provides premium individual house construction, apartment construction, custom home construction, design and build, engineering, real estate and construction loan assistance services in Salem, Tamil Nadu."
+      content="RAMANI BUILDER provides premium individual house construction, apartment construction, custom home construction, design and build services, engineering services, real estate services and construction loan assistance in Salem, Tamil Nadu."
     />
 
     <!-- SEO Keywords -->
     <meta
       name="keywords"
-      content="Ramani Builder, house construction Salem, builders in Salem, individual house construction Salem, apartment construction Salem, custom home construction Salem, design and build Salem, civil engineering Salem, real estate Salem"
+      content="Ramani Builder, house construction Salem, builders in Salem, individual house construction, apartment construction Salem, custom home construction, design and build Salem, engineering services Salem, real estate Salem, construction loan assistance, builders Tamil Nadu"
+    />
+
+    <!-- Author -->
+    <meta
+      name="author"
+      content="RAMANI BUILDER"
     />
 
     <!-- Search Engine Instructions -->
@@ -35,16 +42,10 @@
       content="index, follow"
     />
 
-    <!-- Website Author -->
-    <meta
-      name="author"
-      content="RAMANI BUILDER"
-    />
-
-    <!-- Theme Color -->
-    <meta
-      name="theme-color"
-      content="#020617"
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://ramani-builder.vercel.app/"
     />
 
     <!-- Open Graph / Social Sharing -->
@@ -55,7 +56,7 @@
 
     <meta
       property="og:description"
-      content="Premium house construction, apartments, custom homes, design and build, engineering and real estate services across Salem."
+      content="Premium house construction, custom homes, apartments, design & build, engineering and real estate services in Salem."
     />
 
     <meta
@@ -68,22 +69,47 @@
       content="https://ramani-builder.vercel.app/"
     />
 
-    <!-- Canonical URL -->
-    <link
-      rel="canonical"
-      href="https://ramani-builder.vercel.app/"
+    <meta
+      property="og:image"
+      content="https://ramani-builder.vercel.app/images/9.jpg"
     />
 
+    <meta
+      property="og:site_name"
+      content="RAMANI BUILDER"
+    />
+
+    <!-- Theme Color -->
+    <meta
+      name="theme-color"
+      content="#0f172a"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HomeAndConstructionBusiness",
+        "name": "RAMANI BUILDER",
+        "url": "https://ramani-builder.vercel.app/",
+        "description": "Premium house construction, custom home construction, apartment construction, design and build, engineering and real estate services in Salem.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Salem"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Salem",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        }
+      }
+    </script>
   </head>
 
   <body>
-
     <div id="root"></div>
 
-    <script
-      type="module"
-      src="/src/main.jsx"
-    ></script>
-
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
